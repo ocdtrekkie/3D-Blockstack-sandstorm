@@ -108,12 +108,12 @@
 </div>
 
 
-  <!-- Include Three.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/18.6.4/tween.umd.js"></script>
+  <!-- Include Three.js r128 and Tween.js 18.6.4 -->
+  <script src="Js/three.min.js"></script>
+  <script src="Js/tween.umd.js"></script>
 
-  <!-- Include Cannon.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/cannon.js/0.6.2/cannon.min.js"></script>
+  <!-- Include Cannon.js 0.6.2 -->
+  <script src="Js/cannon.min.js"></script>
   <!-- Theme Management -->
   <script src="Js/themes.js"></script>
   <!-- Game Script -->

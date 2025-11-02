@@ -48,19 +48,23 @@ function updateRestartMessage() {
 }
 
 // Load and save high score from localStorage
-function loadHighScore() {
+async function loadHighScore() {
   try {
-    const saved = localStorage.getItem(HIGH_SCORE_KEY);
-    highScore = saved ? Math.max(0, parseInt(saved, 10) || 0) : 0;
+	let r = await fetch(`/api.php?action=getbestscore&key=bestScore`)
+    let stateJSON = await r.json()
+    highScore = stateJSON? stateJSON.value : 0;
   } catch (_) {
     highScore = 0;
   }
 }
 
 // save high score to localStorage
-function saveHighScore(value) {
+async function saveHighScore(value) {
   try {
-    localStorage.setItem(HIGH_SCORE_KEY, String(Math.max(0, value | 0)));
+	await fetch("/api.php", {
+      method: "post",
+      body: JSON.stringify({bestScore: value})
+    }).then(r => r.json())
   } catch (_) { }
 }
 
