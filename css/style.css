@@ -23,6 +23,7 @@ body {
 #instructions,
 #results,
 #score,
+#highscores,
 #youtube-card {
   position: absolute;
   z-index: 10;
@@ -46,6 +47,26 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   display: none;
+  padding: 0;
+  background: linear-gradient(135deg, rgba(50, 40, 30, 0.95), rgba(40, 35, 25, 0.95));
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 200, 100, 0.2),
+    inset 0 1px 0 rgba(255, 220, 150, 0.15);
+  backdrop-filter: blur(10px);
+  width: 90%;
+  /* take most of the screen */
+  max-width: 700px;
+  /* limit on large screens */
+  min-width: 280px;
+  /* minimum size on small devices */
+  animation: resultsFadeIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#highscores {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   padding: 0;
   background: linear-gradient(135deg, rgba(50, 40, 30, 0.95), rgba(40, 35, 25, 0.95));
   border-radius: 20px;
@@ -286,10 +307,26 @@ body {
   color: #ffcc00;
 }
 
+.highscores-link {
+  display: flex;
+  float: left;
+  width: 50%;
+  align-items:center;
+  justify-content: left;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 200, 100, 0.15);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: clamp(0.85rem, 2.2vw, 0.95rem);
+  animation: slideUp 0.5s ease-out 0.6s backwards;
+}
+
 .social-follow {
   display: flex;
+  float: right;
+  width: 50%;
   align-items: center;
-  justify-content: center;
+  justify-content: right;
   margin-top: 1.5rem;
   padding-top: 1.5rem;
   border-top: 1px solid rgba(255, 200, 100, 0.15);
@@ -464,6 +501,10 @@ canvas {
   left: 0;
   width: 100vw;
   height: 100vh;
+}
+
+a:link {
+  color: inherit;
 }
 
 a:visited {

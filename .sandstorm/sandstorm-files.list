@@ -83,6 +83,7 @@ opt/app/api.php
 opt/app/css/style.css
 opt/app/css/themes.css
 opt/app/favicon.ico
+opt/app/highscores.php
 opt/app/index.php
 opt/app/sound/bg.mp3.mp3
 opt/app/sound/fall.bg.mp3
