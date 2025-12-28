@@ -19,9 +19,9 @@ const pkgdef :Spk.PackageDefinition = (
 
     appTitle = (defaultText = "3D Blockstack"),
 
-    appVersion = 1,  # Increment this for every release.
+    appVersion = 2,  # Increment this for every release.
 
-    appMarketingVersion = (defaultText = "0.0.1"),
+    appMarketingVersion = (defaultText = "0.0.2"),
     # Human-readable representation of appVersion. Should match the way you
     # identify versions of your app in documentation and marketing.
 
@@ -44,10 +44,10 @@ const pkgdef :Spk.PackageDefinition = (
 	
       icons = (
         # Various icons to represent the app in various contexts.
-        appGrid = (png = (dpi1x = embed "../favicon.png")),
+        appGrid = (png = (dpi1x = embed "../bigicon.png")),
         grain = (png = (dpi1x = embed "../favicon.png")),
-        market = (png = (dpi1x = embed "../favicon.png")),
-        marketBig = (png = (dpi1x = embed "../favicon.png")),
+        market = (png = (dpi1x = embed "../bigicon.png")),
+        marketBig = (png = (dpi1x = embed "../bigicon.png")),
       ),
 
       website = "https://github.com/ocdtrekkie/3D-Blockstack-sandstorm",
@@ -80,10 +80,7 @@ const pkgdef :Spk.PackageDefinition = (
         (width = 1919, height = 910, png = embed "../preview/Dark.png"),
         (width = 1919, height = 906, png = embed "../preview/Light.png"),
       ],
-      #changeLog = (defaultText = embed "path/to/sandstorm-specific/changelog.md"),
-      # Documents the history of changes in Github-flavored markdown format (with the same restrictions
-      # as govern `description`). We recommend formatting this with an H1 heading for each version
-      # followed by a bullet list of changes.
+      changeLog = (defaultText = embed "../CHANGELOG.md"),
     ),
   ),
 
